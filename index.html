@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.jsカレンダー</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <h3>カレンダー</h3>
+      <!-- カレンダーのナビと現在開いている月の表示 -->
+      <div id="nav">
+        <div class="nav-item"><span v-on:click="movePrevMonth" >＜</span></div>
+        <div>
+          <p>{{getMonthName(calDate.month)}}</p>
+          <p>-</p>
+          <p>{{calDate.year}}</p>
+        </div>
+        <div class="nav-item"><span v-on:click="moveNextMonth">＞</span></div>
+      </div>
+      <!-- カレンダー表示 -->
+      <table id="calendar">
+        <thead>
+          <tr>
+            <th v-for="week in weeks">{{week}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="week in calendar">
+            <td v-for="day in week"><span>{{day.day}}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

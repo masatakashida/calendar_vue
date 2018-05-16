@@ -5,3 +5,5 @@
 ```
 open index.html
 ```
+
+![カレンダーの画像](./images/ca_sample.png "カレンダー")

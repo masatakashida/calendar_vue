@@ -44,7 +44,6 @@ new Vue({
       }
       var lastDate = new Date(this.calDate.year, this.calDate.month, 0).getDate();
       var dayCount = 1;
-
       var calendar = [];
       for (var w = 0; w < 6; w++) {
         var week = [];

@@ -42,9 +42,6 @@ new Vue({
       } else {
         firstDay = firstDay_s - 1;
       }
-      // 確認用
-      console.log(firstDay_s);
-      console.log(firstDay);
       var lastDate = new Date(this.calDate.year, this.calDate.month, 0).getDate();
       var dayCount = 1;
 
